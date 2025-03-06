@@ -22,15 +22,14 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            padding: 8px; /* Khoảng cách nhỏ xíu */
+            padding: 8px;
             overflow: hidden;
         }
 
-        /* Viền background mỏng hơn */
         .border-container {
             width: 99%;
             height: 99%;
-            border: 3px solid rgba(255, 255, 255, 0.5); /* Viền chỉ còn 1/3 */
+            border: 3px solid rgba(255, 255, 255, 0.5);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,7 +56,7 @@
             font-weight: 600;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
-            border: 1px solid white; /* Viền mỏng hơn */
+            border: 1px solid white;
             opacity: 0;
             transform: translateY(-20px);
             animation: fadeInUp 1s ease-out forwards 0.5s;
@@ -66,15 +65,17 @@
         #diary-container {
             width: 100%;
             max-width: 600px;
+            max-height: 400px; /* Giới hạn chiều cao */
             background: white;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
             display: none;
-            border: 1px solid #5e826e; /* Viền mỏng hơn */
+            border: 1px solid #5e826e;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s ease-out forwards 0.8s;
+            overflow-y: auto; /* Cho phép cuộn nội dung */
         }
 
         @keyframes fadeInUp {
@@ -94,6 +95,16 @@
             color: #333;
             line-height: 1.6;
             white-space: pre-line;
+        }
+        @font-face {
+            font-family: 'SVN-Cookies';
+            src: url('SVN-Cookies.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'SVN-Cookies', sans-serif;
         }
     </style>
 </head>
